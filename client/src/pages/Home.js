@@ -16,7 +16,10 @@ export default function App() {
 
   const transactionsFilter = useMemo(() => {
     return transactions.filter((item) => {
-      return new RegExp(search, "i").test(item.description);
+      return (
+        new RegExp(search, "i").test(item.description) ||
+        new RegExp(search, "i").test(item.category)
+      );
     });
   }, [transactions, search]);
 
