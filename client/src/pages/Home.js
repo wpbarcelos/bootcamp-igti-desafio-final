@@ -10,7 +10,6 @@ import { FiEdit, FiTrash2 } from "react-icons/fi";
 
 export default function App() {
   const [yearMonth, setYearMonth] = useState("");
-  const [loading, setLoading] = useState(true);
   const [transactions, setTransactions] = useState([]);
 
   const [search, setSearch] = useState("");
@@ -36,15 +35,12 @@ export default function App() {
   const saldo = useMemo(() => receitas - despesas);
 
   useEffect(() => {
-    setLoading(true);
     api
       .get("/api/transaction?period=" + yearMonth)
       .then((response) => {
         setTransactions(response.data);
       })
-      .finally(() => {
-        setLoading(false);
-      });
+      .finally(() => {});
   }, [yearMonth]);
 
   async function deleteTransaction(id) {
@@ -53,10 +49,6 @@ export default function App() {
 
       setTransactions(transactions.filter((item) => item._id !== id));
     }
-  }
-
-  if (loading) {
-    return <p>Carregando...</p>;
   }
 
   return (

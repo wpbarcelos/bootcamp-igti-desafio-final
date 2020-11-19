@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7770c2d8-5569-4839-b788-f24ac632e7c9" name="Default Changelist" comment="" />
+    <list default="true" id="7770c2d8-5569-4839-b788-f24ac632e7c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/client/src/pages/NewTransaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/NewTransaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +17,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kU4gEembXehjJh2xNG14XvU5Y0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,11 +44,23 @@
       <workItem from="1605741946205" duration="592000" />
       <workItem from="1605742563710" duration="27000" />
       <workItem from="1605742610774" duration="3944000" />
+      <workItem from="1605802660944" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="322" y="79" width="981" height="707" key="SettingsEditor" timestamp="1605743119137">

@@ -29,24 +29,25 @@ export default function SelectYearMonths({ setYearMonth, yearMonth }) {
     return `${name}/${year}`;
   }
 
-  function nextYearMonth() {}
-
   useEffect(() => {
     api.get("/api/transaction/yearmonths").then((response) => {
       setYearMonths(response.data || []);
-      setYearMonth(response.data[0]);
+      setYearMonth(response.data[response.data.length - 1]);
       setLoading(false);
     });
   }, []);
 
-  function nextYearMonth() {
+  function nextYearMonth(ev) {
+    ev.preventDefault();
     let idx = yearMonths.indexOf(yearMonth);
     if (yearMonths[idx + 1]) {
       setYearMonth(yearMonths[idx + 1]);
     }
   }
 
-  function prevYearMonth() {
+  function prevYearMonth(ev) {
+    ev.preventDefault();
+
     let idx = yearMonths.indexOf(yearMonth);
     if (yearMonths[idx - 1]) {
       setYearMonth(yearMonths[idx - 1]);
@@ -81,7 +82,7 @@ export default function SelectYearMonths({ setYearMonth, yearMonth }) {
         </select>
         <button
           onClick={nextYearMonth}
-          className="btn"
+          className="btn btn-primary"
           disabled={yearMonths[yearMonths.length - 1] == yearMonth}
         >
           &rarr;
